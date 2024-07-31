@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Bold";
+  src: url("./assets/fonts/Montserrat/static/Montserrat-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Semi-Bold";
+  src: url("./assets/fonts/Montserrat/static/Montserrat-SemiBold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Regular";
+  src: url("./assets/fonts/Montserrat/static/Montserrat-Regular.ttf") format("opentype");
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

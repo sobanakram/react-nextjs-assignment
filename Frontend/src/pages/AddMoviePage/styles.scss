@@ -1,0 +1,201 @@
+// Define color variables
+$primary-color: #2BD17E;
+$error-color: #EB5757;
+$input-color: #224957;
+$background-color: #093545;
+$card-color: #092C39;
+$white-color: #FFFFFF;
+
+.new-movie-container {
+    width: 100%;
+    height: 100dvh;
+    position: relative;
+    background-color: $background-color;
+    padding: 120px;
+    z-index: 1;
+
+    .new-movie-heading {
+        text-align: left;
+        font-family: "Semi-Bold";
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 56px;
+        color: $white-color;
+        margin-bottom: 100px;
+    }
+
+    .movie-content {
+        display: flex;
+        gap: 120px;
+        width: 100%;
+
+        .form {
+            .form-group {
+                width: 360px;
+                height: 45px;
+                margin-bottom: 24px;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    background-color: $input-color;
+                    border-radius: 10px;
+                    border: none;
+
+                    font-family: "Regular";
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                    color: $white-color;
+                    padding: 11px 16px;
+                }
+            }
+
+            .publish-year {
+                width: 216px;
+                height: 45px;
+                margin-bottom: 55px;
+            }
+
+            .buttons-container {
+                display: flex;
+                gap: 18px;
+                z-index: 3;
+
+                .button {
+                    width: 179px;
+                    height: 56px;
+                    border-radius: 10px;
+
+                    font-family: "Regular";
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    text-align: center;
+                    cursor: pointer;
+                    color: $white-color;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+
+                .cancel-button {
+                    border: 1px solid #FFFFFF;
+                    background: transparent;
+                }
+
+                .submit-button {
+                    background-color: $primary-color;
+                    border: none;
+                }
+            }
+        }
+
+        .file-picker {
+            width: 473px;
+            height: 504px;
+            background-color: $input-color;
+            border: 2px solid #FFFFFF;
+            z-index: 3;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            .text-and-icon {
+                .drop-img {
+                    margin-bottom: 12px;
+                }
+
+                .drop-text {
+                    font-family: "Regular";
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: $white-color;
+                }
+            }
+
+            .movie-image-container {
+                width: 100%;
+                height: 100%;
+
+                .movie-image {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .footer-img {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .new-movie-container {
+        min-height: 100dvh;
+        height: auto;
+        padding: 80px 24px 0px 24px;
+
+        .movie-content {
+            gap: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .new-movie-container {
+        padding: 50px 24px 24px 24px;
+
+        .new-movie-heading {
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 60px;
+        }
+
+        .movie-content {
+            flex-direction: column;
+            z-index: 3;
+            position: relative;
+
+            .form {
+                .form-group {
+                    width: 100%;
+                }
+
+                .publish-year {
+                    width: 100%;
+                }
+
+                .buttons-container {
+                    width: 100%;
+
+                    .button {
+                        width: 50%;
+                    }
+                }
+            }
+
+            .file-picker {
+                width: 100%;
+                height: 372px;
+            }
+        }
+
+        .footer-img {
+            height: 80px;
+        }
+    }
+}

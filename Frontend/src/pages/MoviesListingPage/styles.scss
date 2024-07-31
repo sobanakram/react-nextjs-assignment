@@ -1,0 +1,278 @@
+// Define color variables
+$primary-color: #2BD17E;
+$error-color: #EB5757;
+$input-color: #224957;
+$background-color: #093545;
+$card-color: #092C39;
+$white-color: #FFFFFF;
+
+.movie-list-container {
+    background-color: #093545;
+    padding: 0px 120px;
+    background-color: $background-color;
+    color: $white-color;
+    position: relative;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        height: 130px;
+        padding: 0px 12px;
+        margin-bottom: 70px;
+
+        .left-side {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            cursor: pointer;
+
+            .my-movies-heading {
+                font-family: "Semi-Bold";
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 56px;
+                text-align: center;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        .right-side {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            cursor: pointer;
+
+            .logout {
+                font-family: "Semi-Bold";
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+                text-align: center;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+        gap: 32px;
+        padding: 8px;
+        border-radius: 12px;
+
+        .movie-card {
+            background-color: $card-color;
+            border-radius: 12px;
+            padding: 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            align-items: flex-start;
+            color: $white-color;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scaleY(1.01);
+                opacity: 0.9;
+            }
+
+            .card-text {
+                padding-left: 8px;
+
+                .movie-title {
+                    font-family: "Regular";
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 32px;
+                    text-align: left;
+                    margin-bottom: 8px;
+                }
+
+                .movie-year {
+                    font-family: "Regular";
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                }
+            }
+
+            .movie-image-container {
+                height: 400px;
+                width: 100%;
+
+                img {
+                    border-radius: 12px;
+
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        color: $white-color;
+        padding: 120px 0px 250px 0px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+
+        .prev-btn {
+            border: none;
+            background: transparent;
+
+            font-family: "Regular";
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: center;
+            color: $white-color;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        .next-btn {
+            border: none;
+            background: transparent;
+
+            font-family: "Regular";
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: center;
+            color: $white-color;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        .page-no {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            border: none;
+            background: $card-color;
+            color: $white-color;
+
+            font-family: "Regular";
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        .active {
+            background: $primary-color;
+        }
+
+        .in-active {
+            opacity: 0.5;
+            cursor: not-allowed;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .footer-img {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .movie-list-container {
+        padding: 0px 24px;
+
+        header {
+            height: 120px;
+        }
+
+        .grid-container {
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            padding: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .movie-list-container {
+        header {
+            .left-side {
+                align-items: flex-end;
+
+                .my-movies-heading {
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+
+                .add-icon {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            .right-side {
+                .logout {
+                    display: none;
+                }
+
+                .logoutIcon {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+
+        .grid-container {
+            .movie-card {
+                padding: 0px 0px 12px 0px;
+
+                .movie-image-container {
+                    height: 280px;
+                    width: 100%;
+
+                    img {
+                        border-radius: 12px 12px 0px 0px;
+                    }
+                }
+            }
+        }
+
+        .pagination {
+            padding: 80px 0px 150px 0px;
+        }
+
+        .footer-img {
+            height: 80px;
+        }
+
+    }
+}
