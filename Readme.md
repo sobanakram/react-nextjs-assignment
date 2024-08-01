@@ -1,4 +1,4 @@
-# CORE Admin
+# React Assignment
 
 Built with the MERN stack (MongoDB, Express, React and NodeJS).
 
