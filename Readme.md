@@ -111,15 +111,6 @@ npm start
 
 ## Important Notes
 
-As the figma don't have a sign up flow so you have to create a user of your own credentials in the db, for this open the Mongodb Compass, create a project with name movie-task, create a user table in the db and add a record with the following fiels
-
-```
-name (type should be a String and fill it with your name)
-email (type should be String and give it a valid email value)
-password  (type should be String and it should be created using the bcryptjs liberary)
-jwt (type should be String and by default it should be null)
-createdAt (type should be Date and give it a value)
-updatedAt (type should be Date and give it a value)
-```
+You may ask for the credentials for the login
 
 
